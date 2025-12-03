@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clip Mind</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Clip Mind</h1>
+      <div class="header-actions">
+        <button id="clearAll" class="btn btn-danger">Clear All</button>
+      </div>
+    </header>
+
+    <div class="controls">
+      <div class="export-section">
+        <label>Export Mode:</label>
+        <select id="exportMode">
+          <option value="timestamp">By Timestamp</option>
+          <option value="url">By URL</option>
+          <option value="domain">By Domain</option>
+        </select>
+        <button id="exportBtn" class="btn btn-primary">Export to Clipboard</button>
+      </div>
+    </div>
+
+    <div class="clips-container">
+      <div id="clipsList" class="clips-list">
+        <div class="empty-state">No clips yet. Select text and right-click to add clips.</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
+
