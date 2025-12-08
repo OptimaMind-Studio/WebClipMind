@@ -91,3 +91,23 @@ chrome.commands.onCommand.addListener(async (command) => {
   }
 });
 
+// Handle copy to clipboard requests from popup
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  if (request.action === "copyToClipboard") {
+    // Forward to active tab's content script to copy
+    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+      if (tabs[0]) {
+        chrome.tabs.sendMessage(tabs[0].id, {
+          action: "copyText",
+          text: request.text
+        }, (response) => {
+          sendResponse(response || { success: false });
+        });
+      } else {
+        sendResponse({ success: false, error: "No active tab" });
+      }
+    });
+    return true; // Indicates we will send a response asynchronously
+  }
+});
+
