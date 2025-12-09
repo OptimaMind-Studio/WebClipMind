@@ -4,7 +4,8 @@
 
 Each browsing record follows this format, and two records are separated by an empty line:
 
-【YYYY-MM-DD HH:MM:SS】: [domain](url)
+【YYYY-MM-DD HH:MM:SS】: (domain)(url)
+
 text content
 
 【Required Analysis Process & Style】
@@ -23,13 +24,16 @@ A markdown bullet-point summary capturing the knowledge from the browsing record
 
 A markdown table summarizing the important concepts that appear in the records.
 
+A markdown-format reference link list with numbered tags, covering all original URLs appearing in the browsing records.
+(The format for each reference link is 【label】. [title](URL), where the title is guessed from the URL, and the URL is the pure link.)
+
 【Requirements】
 
 Do not add new knowledge that does not exist in the browsing records.
 
 If the records themselves are short, keep the summary short as well.
 
----
+In the generated bullet-point summary and concepts, include reference numbers indicating which statement corresponds to which reference; ensure the numbering matches the reference link list accurately.
 
 All the browsing records are as follows:
 

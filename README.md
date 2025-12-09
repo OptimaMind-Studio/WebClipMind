@@ -38,6 +38,9 @@ Clips are separated by blank lines.
 
 ## Release Notes
 
+### 2025-12-08 v2.1.0
+- **Prompt Enhancement**: Reference link list output, citation numbering in summaries
+
 ### 2025-12-08 v2.0.0
 - **AI Summary**: Gemini API integration, custom prompt support
 - **Settings Page**: API key configuration, Role/Field/Language fields, custom prompt editor
